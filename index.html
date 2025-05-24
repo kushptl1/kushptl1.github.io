@@ -15,6 +15,25 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+
+	<style>
+		@media (max-width: 700px) {
+			#banner .inner {
+				flex-direction: column !important;
+				gap: 24px !important;
+				text-align: center !important;
+			}
+
+			#banner .inner img {
+				margin: 0 auto !important;
+			}
+
+			#banner .inner div {
+				max-width: 100% !important;
+				text-align: center !important;
+			}
+		}
+	</style>
 </head>
 
 <body class="is-preload">
@@ -47,10 +66,17 @@
 
 		<!-- Banner -->
 		<section id="banner">
-			<div class="inner">
-				<div class="logo"><span class="icon fa-gem"></span></div>
-				<h2>Kush Patel</h2>
-				<p> Mastering in CyberSecurity & User Support </p>
+			<div class="inner" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 60px; min-height: 350px;">
+				<img src="images/profile.JPG" alt="Kush Patel" style="width:220px; height:220px; object-fit:cover; border-radius:50%; box-shadow: 0 4px 24px rgba(0,0,0,0.18);">
+				<div style="max-width: 500px; text-align: left;">
+					<h2 style="margin-bottom: 16px; font-size: 2.5em;">Kush Patel</h2>
+					<p style="margin-bottom: 16px; font-size: 1.1em;">
+					 Securing Access & Supporting Users | Helping Healthcare Teams Stay Compliant & Connected | Cybersecurity Specialist & IAM Expert in Training
+					</p>
+					<p style="font-size: 1.05em;">
+						<strong>About Me:</strong> I am passionate about cybersecurity and identity management, with experience supporting healthcare teams and ensuring compliance. Always eager to learn and grow in the field!
+					</p>
+				</div>
 			</div>
 		</section>
 
