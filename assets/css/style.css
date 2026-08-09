@@ -294,6 +294,45 @@ a.card:hover {
 	font-size: 0.92rem;
 }
 
+/* ---------- Medium posts ---------- */
+
+.post-card {
+	padding: 0;
+	overflow: hidden;
+}
+
+.post-card .post-thumb {
+	width: 100%;
+	height: 170px;
+	object-fit: cover;
+	border-bottom: 1px solid var(--border);
+}
+
+.post-card .post-date {
+	color: var(--accent);
+	font-size: 0.78rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	padding: 20px 24px 0;
+}
+
+.post-card h3 {
+	padding: 0 24px;
+}
+
+.post-card p {
+	padding: 0 24px;
+}
+
+.post-card .card-link {
+	padding: 0 24px 24px;
+}
+
+.posts-status {
+	color: var(--muted);
+}
+
 /* ---------- Certification cards ---------- */
 
 .cert-grid {
