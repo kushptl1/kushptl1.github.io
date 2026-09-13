@@ -78,6 +78,6 @@ fetch(
 	})
 	.catch(() => {
 		container.innerHTML =
-			'<p class="posts-status">Couldn’t load posts right now — ' +
-			`<a href="https://medium.com/${MEDIUM_USER}" target="_blank" rel="noreferrer noopener">read them on Medium</a>.</p>`;
+			'<p class="posts-status">Couldn’t load posts right now. ' +
+			`<a href="https://medium.com/${MEDIUM_USER}" target="_blank" rel="noreferrer noopener">Read them on Medium</a>.</p>`;
 	});
