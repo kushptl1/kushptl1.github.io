@@ -117,20 +117,11 @@ a {
 	flex-shrink: 0;
 }
 
-.hero-text .eyebrow {
-	color: var(--accent);
-	font-weight: 600;
-	font-size: 0.85rem;
-	text-transform: uppercase;
-	letter-spacing: 0.14em;
-	margin-bottom: 10px;
-}
-
 .hero-text h1 {
 	font-size: clamp(2.2rem, 5vw, 3.2rem);
 	font-weight: 800;
 	line-height: 1.15;
-	margin-bottom: 26px;
+	margin-bottom: 14px;
 }
 
 .hero-text h1 span {
@@ -243,6 +234,25 @@ a {
 	color: var(--text);
 	font-size: 0.85rem;
 	font-weight: 500;
+}
+
+.skill-groups {
+	display: grid;
+	gap: 22px;
+	margin-top: 32px;
+}
+
+.skill-group h3 {
+	font-size: 0.78rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--accent);
+	margin-bottom: 10px;
+}
+
+.skill-group .chips {
+	margin-top: 0;
 }
 
 /* ---------- Cards ---------- */
@@ -414,30 +424,6 @@ a.card:hover {
 	font-size: 0.93rem;
 }
 
-.cert-list {
-	margin-top: 40px;
-	display: grid;
-	gap: 16px;
-}
-
-.cert-row {
-	background: var(--card);
-	border: 1px solid var(--border);
-	border-radius: var(--radius);
-	padding: 20px 26px;
-}
-
-.cert-row h4 {
-	font-size: 1rem;
-	font-weight: 650;
-	margin-bottom: 4px;
-}
-
-.cert-row p {
-	color: var(--muted);
-	font-size: 0.92rem;
-}
-
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -538,10 +524,6 @@ a.card:hover {
 	}
 
 	.hero-actions {
-		justify-content: center;
-	}
-
-	.chips {
 		justify-content: center;
 	}
 
