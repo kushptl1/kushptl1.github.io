@@ -1,4 +1,4 @@
-/* Kush Patel — Portfolio styles */
+/* Kush Patel | Portfolio styles */
 
 :root {
 	--bg: #0b0f1a;
@@ -29,6 +29,7 @@ body {
 	color: var(--text);
 	line-height: 1.65;
 	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
 }
 
 img {
@@ -42,7 +43,7 @@ a {
 }
 
 .container {
-	width: min(1060px, 92%);
+	width: min(1060px, calc(100% - 40px));
 	margin: 0 auto;
 }
 
@@ -489,6 +490,10 @@ a.card:hover {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 760px) {
+	.hero {
+		padding: 56px 0 48px;
+	}
+
 	.hero .container {
 		flex-direction: column;
 		text-align: center;
@@ -517,7 +522,108 @@ a.card:hover {
 		gap: 18px;
 	}
 
+	.section {
+		padding: 52px 0;
+	}
+
+	.section-head {
+		margin-bottom: 28px;
+	}
+
+	.section-head h2 {
+		font-size: 1.6rem;
+	}
+
+	.card-grid,
+	.cert-grid {
+		grid-template-columns: 1fr;
+	}
+
 	.cert-card {
 		flex-direction: column;
+	}
+
+	.page-hero {
+		padding: 48px 0 36px;
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		width: calc(100% - 32px);
+	}
+
+	.site-header .container {
+		height: auto;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+		padding: 12px 0;
+	}
+
+	.site-nav {
+		width: 100%;
+		justify-content: space-between;
+		gap: 8px;
+	}
+
+	.site-nav a {
+		font-size: 0.85rem;
+	}
+
+	.hero-photo {
+		width: 140px;
+		height: 140px;
+	}
+
+	.hero-text h1 {
+		font-size: 2rem;
+	}
+
+	.hero-text .tagline {
+		font-size: 1rem;
+	}
+
+	.hero-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.btn {
+		justify-content: center;
+		width: 100%;
+	}
+
+	.card,
+	.cert-card {
+		padding: 22px;
+	}
+
+	.post-card .post-date,
+	.post-card h3,
+	.post-card p {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.post-card .card-link {
+		padding: 0 20px 20px;
+	}
+
+	.about-body {
+		font-size: 1rem;
+	}
+
+	.social-links {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.social-links a {
+		justify-content: center;
+	}
+
+	.footer-inner h2 {
+		font-size: 1.3rem;
 	}
 }
