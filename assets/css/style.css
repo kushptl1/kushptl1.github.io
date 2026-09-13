@@ -95,7 +95,7 @@ a {
 /* ---------- Hero ---------- */
 
 .hero {
-	padding: 90px 0 70px;
+	padding: 80px 0 36px;
 	background:
 		radial-gradient(600px 300px at 15% 0%, rgba(56, 189, 248, 0.12), transparent 70%),
 		radial-gradient(600px 300px at 85% 10%, rgba(129, 140, 248, 0.12), transparent 70%);
@@ -130,7 +130,7 @@ a {
 	font-size: clamp(2.2rem, 5vw, 3.2rem);
 	font-weight: 800;
 	line-height: 1.15;
-	margin-bottom: 14px;
+	margin-bottom: 26px;
 }
 
 .hero-text h1 span {
@@ -214,6 +214,10 @@ a {
 
 /* ---------- About ---------- */
 
+#about {
+	padding-top: 36px;
+}
+
 .about-body {
 	color: var(--muted);
 	font-size: 1.05rem;
@@ -293,6 +297,34 @@ a.card:hover {
 	color: var(--accent);
 	font-weight: 600;
 	font-size: 0.92rem;
+}
+
+/* ---------- Project cards ---------- */
+
+.project-card p code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+	font-size: 0.88em;
+	color: var(--text);
+	background: rgba(148, 163, 184, 0.12);
+	padding: 1px 6px;
+	border-radius: 6px;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.tag {
+	font-size: 0.74rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	padding: 4px 10px;
+	border-radius: 999px;
+	background: rgba(56, 189, 248, 0.1);
+	color: var(--accent);
+	border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 /* ---------- Medium posts ---------- */
@@ -491,7 +523,7 @@ a.card:hover {
 
 @media (max-width: 760px) {
 	.hero {
-		padding: 56px 0 48px;
+		padding: 48px 0 24px;
 	}
 
 	.hero .container {
@@ -563,8 +595,8 @@ a.card:hover {
 
 	.site-nav {
 		width: 100%;
-		justify-content: space-between;
-		gap: 8px;
+		flex-wrap: wrap;
+		gap: 6px 16px;
 	}
 
 	.site-nav a {

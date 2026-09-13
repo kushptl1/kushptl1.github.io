@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Kush Patel | Cybersecurity & IAM</title>
 	<meta name="description"
-		content="Kush Patel is a cybersecurity specialist and IAM expert in training, helping healthcare teams stay compliant and connected." />
+		content="Kush Patel is a cybersecurity and cloud specialist and IAM expert in training, helping healthcare teams stay compliant and connected." />
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +22,7 @@
 			<a class="brand" href="index.html">Kush<span>Patel</span></a>
 			<nav class="site-nav">
 				<a href="#about">About</a>
+				<a href="#projects">Projects</a>
 				<a href="Certifications.html">Certifications</a>
 				<a href="#blog">Blog</a>
 				<a href="#connect">Contact</a>
@@ -34,12 +35,7 @@
 		<div class="container">
 			<img class="hero-photo" src="images/profile.JPG" alt="Kush Patel" />
 			<div class="hero-text">
-				<p class="eyebrow">Cybersecurity · Identity & Access Management</p>
 				<h1>Hi, I'm <span>Kush Patel</span></h1>
-				<p class="tagline">
-					Securing access and supporting users, helping healthcare teams stay compliant
-					and connected. Cybersecurity specialist and IAM expert in training.
-				</p>
 				<div class="hero-actions">
 					<a class="btn btn-primary" href="#connect">Get in Touch</a>
 					<a class="btn btn-ghost" href="Certifications.html">View Certifications</a>
@@ -55,24 +51,128 @@
 				<h2>About Me</h2>
 			</div>
 			<p class="about-body">
-				I'm passionate about <strong>cybersecurity</strong> and <strong>identity management</strong>, with
-				hands-on experience supporting healthcare teams and ensuring compliance. I focus on securing access,
-				keeping users productive, and building on strong security fundamentals, and I'm always eager to
-				learn and grow in the field.
+				I'm passionate about <strong>cybersecurity</strong>, <strong>cloud infrastructure</strong>, and
+				<strong>identity management</strong>, with hands-on experience supporting healthcare teams and
+				ensuring compliance. I focus on securing access and keeping users productive, and I'm building
+				toward cloud security by automating AWS infrastructure with Terraform, CloudFormation, and Python.
+				I'm always eager to learn and grow in the field.
 			</p>
 			<div class="chips">
 				<span class="chip">Identity & Access Management</span>
+				<span class="chip">AWS</span>
+				<span class="chip">Terraform</span>
+				<span class="chip">CloudFormation</span>
+				<span class="chip">Python &amp; Boto3</span>
+				<span class="chip">EC2 · VPC · S3</span>
 				<span class="chip">Security Compliance</span>
 				<span class="chip">CompTIA Security+</span>
 				<span class="chip">Azure Fundamentals</span>
 				<span class="chip">Splunk</span>
+				<span class="chip">ServiceNow</span>
+				<span class="chip">BeyondTrust</span>
+				<span class="chip">CrowdStrike Falcon Identity Protection</span>
+				<span class="chip">Compromised Password Detection</span>
+				<span class="chip">Vulnerability Management</span>
+				<span class="chip">Linux</span>
 				<span class="chip">Healthcare IT</span>
 			</div>
 		</div>
 	</section>
 
+	<!-- Projects -->
+	<section class="section alt" id="projects">
+		<div class="container">
+			<div class="section-head">
+				<h2>Cloud Projects</h2>
+				<p>Hands-on AWS infrastructure work, built with Terraform, CloudFormation, and Python.</p>
+			</div>
+			<div class="card-grid">
+				<a class="card project-card" href="https://github.com/kushptl1/Web-Server-Deployment-and-Automation"
+					target="_blank" rel="noreferrer noopener">
+					<h3>AWS Web Server Deployment</h3>
+					<p>Modular Terraform deployment of a secure web tier: custom VPC with public and private subnets,
+						Apache on EC2 behind an Application Load Balancer, S3 for static assets, and DynamoDB for
+						user data.</p>
+					<div class="tags">
+						<span class="tag">Terraform</span>
+						<span class="tag">VPC</span>
+						<span class="tag">EC2</span>
+						<span class="tag">ALB</span>
+						<span class="tag">S3</span>
+						<span class="tag">DynamoDB</span>
+					</div>
+					<span class="card-link">View on GitHub →</span>
+				</a>
+				<a class="card project-card" href="https://github.com/kushptl1/AWS-CloudFormation" target="_blank"
+					rel="noreferrer noopener">
+					<h3>AWS CloudFormation Stack</h3>
+					<p>Single-template infrastructure stack provisioning a VPC, subnets and routing, an EC2 instance,
+						an S3 bucket, and a Lambda function with a scoped IAM execution role, plus Boto3 scripts to
+						interact with the deployed resources.</p>
+					<div class="tags">
+						<span class="tag">CloudFormation</span>
+						<span class="tag">Lambda</span>
+						<span class="tag">IAM</span>
+						<span class="tag">Python</span>
+					</div>
+					<span class="card-link">View on GitHub →</span>
+				</a>
+				<a class="card project-card" href="https://github.com/kushptl1/terraform-state-lab" target="_blank"
+					rel="noreferrer noopener">
+					<h3>Terraform Remote State</h3>
+					<p>Configured a remote Terraform backend using S3 for state storage and DynamoDB for state
+						locking, enabling safe, team-friendly infrastructure changes.</p>
+					<div class="tags">
+						<span class="tag">Terraform</span>
+						<span class="tag">S3</span>
+						<span class="tag">DynamoDB</span>
+					</div>
+					<span class="card-link">View on GitHub →</span>
+				</a>
+				<a class="card project-card" href="https://github.com/kushptl1/terraform-multiple-instances"
+					target="_blank" rel="noreferrer noopener">
+					<h3>Terraform Loops for EC2</h3>
+					<p>Used <code>count</code> and <code>for_each</code> to provision multiple EC2 instances
+						dynamically from a single configuration, verified with the AWS CLI.</p>
+					<div class="tags">
+						<span class="tag">Terraform</span>
+						<span class="tag">EC2</span>
+						<span class="tag">AWS CLI</span>
+					</div>
+					<span class="card-link">View on GitHub →</span>
+				</a>
+				<a class="card project-card"
+					href="https://github.com/kushptl1/Amazon-S3-activities-using-Python-Boto3" target="_blank"
+					rel="noreferrer noopener">
+					<h3>S3 Automation with Boto3</h3>
+					<p>Python scripts covering the S3 lifecycle: creating buckets, uploading and downloading objects,
+						listing contents, enabling versioning, and cleaning up.</p>
+					<div class="tags">
+						<span class="tag">Python</span>
+						<span class="tag">Boto3</span>
+						<span class="tag">S3</span>
+					</div>
+					<span class="card-link">View on GitHub →</span>
+				</a>
+				<a class="card project-card" href="https://github.com/kushptl1/terraform-lab" target="_blank"
+					rel="noreferrer noopener">
+					<h3>Terraform Fundamentals Lab</h3>
+					<p>Introductory Terraform work provisioning EC2, VPC, and S3 resources on AWS as a foundation for
+						the modular projects above.</p>
+					<div class="tags">
+						<span class="tag">Terraform</span>
+						<span class="tag">EC2</span>
+						<span class="tag">VPC</span>
+						<span class="tag">S3</span>
+					</div>
+					<span class="card-link">View on GitHub →</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
 	<!-- Explore -->
-	<section class="section alt" id="explore">
+	<section class="section" id="explore">
 		<div class="container">
 			<div class="section-head">
 				<h2>Explore</h2>
@@ -106,7 +206,7 @@
 	</section>
 
 	<!-- Latest from Medium -->
-	<section class="section" id="blog">
+	<section class="section alt" id="blog">
 		<div class="container">
 			<div class="section-head">
 				<h2>Latest from Medium</h2>
