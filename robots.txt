@@ -1,4 +1,7 @@
-User-agent: *
-Allow: /
+# Crawling is allowed on purpose: every page carries a "noindex" robots meta
+# tag, and a crawler has to fetch the page to see it. Blocking with
+# "Disallow: /" would hide that tag and can leave a bare URL listed in search
+# results anyway.
 
-Sitemap: https://kushptl1.github.io/sitemap.xml
+User-agent: *
+Disallow:

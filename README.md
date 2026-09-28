@@ -11,7 +11,7 @@ Personal portfolio site for **Kush Patel**, focused on cybersecurity and identit
 ├── index.html                  # Home (about, projects, blog, contact)
 ├── Certifications.html         # Certifications and training
 ├── 404.html                    # Not-found page served by GitHub Pages
-├── robots.txt / sitemap.xml    # Search engine basics
+├── robots.txt                  # Crawl policy (see "Search visibility")
 ├── assets/css/style.css        # Site styles
 ├── assets/js/site.js           # Theme toggle, mobile nav, footer year
 ├── assets/js/medium-feed.js    # Renders blog cards
@@ -41,6 +41,20 @@ python3 scripts/fetch_medium.py
 
 If that file is ever missing, the page falls back to fetching the feed through
 rss2json at runtime, then to a plain link to Medium.
+
+## Search visibility
+
+The site is deliberately kept out of search results. Every page carries
+`<meta name="robots" content="noindex, nofollow">`, and `robots.txt` allows
+crawling so that tag is actually seen; blocking with `Disallow: /` would stop
+crawlers reading the page at all, which can leave a bare URL in results with
+no way to remove it. There is no sitemap, by design.
+
+The site is still public. Anyone with the link can open it, and the source
+repo is public too. This setting only asks search engines not to list it.
+
+To become listed again: drop the `robots` meta tag from each page and add a
+sitemap back.
 
 ## Theming
 
