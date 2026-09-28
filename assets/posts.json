@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Hashcat: A password “recovery” tool…",
+    "link": "https://medium.com/@krp20502050/hashcat-a-password-recovery-tool-a8600039943d",
+    "pubDate": "Fri, 27 Jun 2025 16:38:02 GMT",
+    "excerpt": "Hash: A fixed-length string or value generated from a plaintext input using a hash function, often used for storing passwords securely. Word…",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/0*pMm8CusZFTEdpFEz.png"
+  },
+  {
+    "title": "DoD Cyber Sentinel CTF",
+    "link": "https://medium.com/@krp20502050/dod-cyber-sentinel-ctf-5ded35414398",
+    "pubDate": "Mon, 23 Jun 2025 19:22:04 GMT",
+    "excerpt": "Cool write-up by by Chopp_Sueyy: https://chopp-sueyy.medium.com/dod-cyber-sentinel-ctf-4cc363740546",
+    "thumbnail": "https://cdn-images-1.medium.com/max/400/1*Efcu3KA7-ZNQfS3wb9GrWQ.png"
+  },
+  {
+    "title": "Enable Copy-Paste in UTM with Kali Linux (via SPICE Tools)",
+    "link": "https://medium.com/@krp20502050/enable-copy-paste-in-utm-with-kali-linux-via-spice-tools-f8d30ad5f129",
+    "pubDate": "Thu, 19 Jun 2025 01:22:29 GMT",
+    "excerpt": "Photo by Gabriel Heinzer on Unsplash Open Terminal in Kali Linux Update Package Lists sudo apt update Install Required SPICE/QEMU Tools sudo…",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/0*aiTAKL8HPEhY24pt"
+  },
+  {
+    "title": "Splunkin’ Around — SIEMsational CTF",
+    "link": "https://medium.com/@krp20502050/splunkin-around-siemsational-ctf-8b5693a904df",
+    "pubDate": "Wed, 11 Jun 2025 05:06:24 GMT",
+    "excerpt": "Splunkin’ Around — SIEMsational CTF If your Splunk Enterprise demo license is expiring, you can switch the demo license to a free license by…",
+    "thumbnail": "https://cdn-images-1.medium.com/max/500/0*CKkdicTBG_2GMuyB.jpg"
+  },
+  {
+    "title": "Try Cyber — Sponsored by CISA",
+    "link": "https://medium.com/@krp20502050/try-cyber-sponsored-by-cisa-a613ba28af0a",
+    "pubDate": "Mon, 09 Jun 2025 20:27:46 GMT",
+    "excerpt": "Try Cyber — Sponsored by CISA CHALLENGES — https://trycyber.us/challenges/ NICE Framework, is a nationally focused resource to help employer…",
+    "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*aBhN3DxYKKoywuaDZwK7tg.png"
+  },
+  {
+    "title": "Nmap using Zenmap",
+    "link": "https://medium.com/@krp20502050/nmap-using-zenmap-3d3eea893d27",
+    "pubDate": "Mon, 09 Jun 2025 19:42:36 GMT",
+    "excerpt": "Target: 73.44.216.0/24 This represents a Class C subnet (256 addresses, from 73.44.216.0 to 73.44.216.255). Profile: Choose Intense scan or…",
+    "thumbnail": "https://cdn-images-1.medium.com/max/256/0*PdT9MVBjuU4wn2FA.png"
+  }
+]
