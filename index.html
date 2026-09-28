@@ -2,69 +2,157 @@
 <html lang="en">
 
 <head>
+	<script>
+		// Applies the saved theme before first paint so the page never flashes.
+		document.documentElement.classList.add("js");
+		try {
+			var t = localStorage.getItem("theme");
+			if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+		} catch (e) {}
+	</script>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Kush Patel | Cybersecurity & IAM</title>
 	<meta name="description"
-		content="Kush Patel is a cybersecurity and cloud specialist and IAM expert in training, helping healthcare teams stay compliant and connected." />
+		content="Kush Patel secures identity and access in healthcare and is building toward cloud security with AWS, Terraform, and Python." />
+	<link rel="canonical" href="https://kushptl1.github.io/" />
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+	<!-- Social preview -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Kush Patel" />
+	<meta property="og:url" content="https://kushptl1.github.io/" />
+	<meta property="og:title" content="Kush Patel | Cybersecurity &amp; IAM" />
+	<meta property="og:description"
+		content="Securing identity and access in healthcare, and building toward cloud security. Open to cloud security and IAM engineering roles." />
+	<meta property="og:image" content="https://kushptl1.github.io/images/og-card.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Kush Patel, cybersecurity and IAM" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Kush Patel | Cybersecurity &amp; IAM" />
+	<meta name="twitter:description"
+		content="Securing identity and access in healthcare, and building toward cloud security." />
+	<meta name="twitter:image" content="https://kushptl1.github.io/images/og-card.jpg" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="assets/css/style.css" />
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Kush Patel",
+		"url": "https://kushptl1.github.io/",
+		"image": "https://kushptl1.github.io/images/og-card.jpg",
+		"jobTitle": "IT Access Control Security Specialist",
+		"description": "Identity and access security in healthcare, building toward cloud security.",
+		"knowsAbout": ["Identity and Access Management", "Cybersecurity", "Cloud Security", "AWS", "Terraform"],
+		"sameAs": [
+			"https://www.linkedin.com/in/Kusptl",
+			"https://github.com/kushptl1",
+			"https://medium.com/@krp20502050"
+		]
+	}
+	</script>
 </head>
 
 <body>
+
+	<a class="skip-link" href="#main">Skip to content</a>
 
 	<!-- Header -->
 	<header class="site-header">
 		<div class="container">
 			<a class="brand" href="index.html">Kush<span>Patel</span></a>
-			<nav class="site-nav">
+			<nav class="site-nav" id="site-nav">
 				<a href="#about">About</a>
+				<a href="#experience">Experience</a>
 				<a href="#projects">Projects</a>
+				<a href="#blog">Writing</a>
 				<a href="Certifications.html">Certifications</a>
-				<a href="#blog">Blog</a>
 				<a href="#connect">Contact</a>
 			</nav>
+				<div class="nav-actions">
+					<button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+						<svg class="icon-light" viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-13.5a1 1 0 0 1 1 1V6a1 1 0 0 1-2 0V4.5a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1V21a1 1 0 0 1-2 0v-1.5a1 1 0 0 1 1-1zM4.5 11a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2h1.5zm16.5 0a1 1 0 0 1 0 2h-1.5a1 1 0 0 1 0-2H21zM5.99 4.58l1.06 1.06a1 1 0 0 1-1.41 1.41L4.58 5.99A1 1 0 0 1 5.99 4.58zm12.02 12.02 1.06 1.06a1 1 0 0 1-1.41 1.41l-1.06-1.06a1 1 0 0 1 1.41-1.41zM18.01 4.58a1 1 0 0 1 1.41 1.41l-1.06 1.06a1 1 0 1 1-1.41-1.41l1.06-1.06zM5.99 16.6a1 1 0 0 1 1.41 1.41l-1.06 1.06a1 1 0 0 1-1.41-1.41l1.06-1.06z" />
+						</svg>
+						<svg class="icon-dark" viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M21.3 13.2a9 9 0 1 1-10.5-10.5 1 1 0 0 1 1.2 1.3 7 7 0 0 0 8 8 1 1 0 0 1 1.3 1.2z" />
+						</svg>
+					</button>
+					<button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-expanded="false"
+						aria-controls="site-nav">
+						<span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+					</button>
+				</div>
 		</div>
 	</header>
+
+	<main id="main">
 
 	<!-- Hero -->
 	<section class="hero">
 		<div class="container">
-			<img class="hero-photo" src="images/profile.JPG" alt="Kush Patel" />
 			<div class="hero-text">
-				<h1>Hi, I'm <span>Kush Patel</span></h1>
-				<p class="tagline">IAM analyst in healthcare, building toward cloud security.</p>
-				<div class="hero-actions">
-					<a class="btn btn-primary" href="#connect">Get in Touch</a>
+				<p class="kicker"><span class="dot" aria-hidden="true"></span>Open to cloud security &amp; IAM roles</p>
+				<h1 class="hero-title">Hi, I'm <em>Kush Patel</em>.<br />I secure identity<br />and access.</h1>
+				<p class="hero-sub">Keeping clinicians' access tight, audited, and fast. Building toward cloud security
+					with AWS, Terraform, and Python.</p>
+				<div class="hero-cta">
+					<a class="btn btn-primary" href="#connect">Get in Touch <span aria-hidden="true">&rarr;</span></a>
+					<a class="btn btn-ghost" href="#projects">View Projects</a>
 					<a class="btn btn-ghost" href="Certifications.html">View Certifications</a>
 				</div>
 			</div>
+		</div>
+		<div class="container">
+			<dl class="stats">
+				<div>
+					<dt>Years in IT</dt>
+					<dd data-since="2022-06">4+</dd>
+				</div>
+				<div>
+					<dt>Certifications</dt>
+					<dd>4</dd>
+				</div>
+				<div>
+					<dt>Cloud Projects</dt>
+					<dd class="js-project-count">6</dd>
+				</div>
+				<div>
+					<dt>Focus</dt>
+					<dd class="small">Identity &amp; Access<br />Cloud Security</dd>
+				</div>
+			</dl>
 		</div>
 	</section>
 
 	<!-- About -->
 	<section class="section" id="about">
-		<div class="container">
-			<div class="section-head">
-				<h2>About Me</h2>
-			</div>
-			<p class="about-body">
-				I'm passionate about <strong>cybersecurity</strong>, <strong>cloud infrastructure</strong>, and
-				<strong>identity management</strong>, with hands-on experience supporting healthcare teams and
-				ensuring compliance. I focus on securing access and keeping users productive, and I'm building
-				toward cloud security by automating AWS infrastructure with Terraform, CloudFormation, and Python.
-				I'm always eager to learn and grow in the field.
-			</p>
-			<div class="skill-groups">
+		<div class="container split">
+			<h2 class="split-label"><span class="sec-num">01</span>About</h2>
+			<div>
+				<p class="about-body">
+					Day to day I work in <strong>identity and access management</strong>: reviewing entitlements,
+					remediating compromised credentials, and automating the joiner-mover-leaver workflows that
+					decide who can reach what. Healthcare makes that unforgiving. Access has to be tight enough to
+					survive an audit and fast enough that nobody waits on a login.
+				</p>
+				<p class="about-body">
+					I'm extending that into <strong>cloud security</strong>, building AWS environments with
+					Terraform and CloudFormation so the same least-privilege thinking applies to infrastructure.
+				</p>			<div class="skill-groups">
 				<div class="skill-group">
 					<h3>Identity &amp; Access</h3>
 					<div class="chips">
 						<span class="chip">Identity &amp; Access Management</span>
+						<span class="chip">Active Directory &amp; Azure AD</span>
 						<span class="chip">CrowdStrike Falcon Identity Protection</span>
 						<span class="chip">BeyondTrust</span>
+						<span class="chip">RBAC &amp; Access Reviews</span>
 						<span class="chip">Compromised Password Detection</span>
 						<span class="chip">Security Compliance</span>
 					</div>
@@ -74,6 +162,7 @@
 					<div class="chips">
 						<span class="chip">ServiceNow</span>
 						<span class="chip">Splunk</span>
+						<span class="chip">PowerShell</span>
 						<span class="chip">Linux</span>
 						<span class="chip">Healthcare IT</span>
 					</div>
@@ -87,18 +176,74 @@
 						<span class="chip">Python &amp; Boto3</span>
 					</div>
 				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Experience -->
+	<section class="section" id="experience">
+		<div class="container split">
+			<h2 class="split-label"><span class="sec-num">02</span>Experience</h2>
+			<div>
+				<ol class="timeline">
+					<li class="tl-group" data-start="2023-10">
+						<div class="tl-date">Oct 2023 &mdash; Present</div>
+						<div class="tl-main">
+							<h3 class="tl-org">University of Maryland Medical System
+								<span class="pill js-tenure">3 yr</span>
+							</h3>
+							<ol class="tl-roles">
+								<li class="tl-role-item current" data-start="2025-01">
+									<h4 class="tl-title">IT Access Control Security Specialist</h4>
+									<div class="tl-meta">
+										<span class="tl-range">Jan 2025 &mdash; Present</span>
+										<span class="pill accent">current</span>
+										<span class="pill js-duration">1 yr 9 mo</span>
+									</div>
+									<div class="tl-bar" aria-hidden="true"><span style="--w: 100.0%"></span></div>
+								</li>
+								<li class="tl-role-item" data-start="2023-10" data-end="2025-01">
+									<h4 class="tl-title">IS&amp;T Helpdesk Specialist</h4>
+									<div class="tl-meta">
+										<span class="tl-range">Oct 2023 &mdash; Jan 2025</span>
+										<span class="pill js-duration">1 yr 4 mo</span>
+									</div>
+									<div class="tl-bar" aria-hidden="true"><span style="--w: 76.2%"></span></div>
+								</li>
+							</ol>
+						</div>
+					</li>
+					<li class="tl-group" data-start="2022-06" data-end="2023-10">
+						<div class="tl-date">Jun 2022 &mdash; Oct 2023</div>
+						<div class="tl-main">
+							<h3 class="tl-org">University of Maryland, Baltimore County</h3>
+							<ol class="tl-roles">
+								<li class="tl-role-item" data-start="2022-06" data-end="2023-10">
+									<h4 class="tl-title">Student IT Consultant</h4>
+									<div class="tl-meta">
+										<span class="tl-range">Jun 2022 &mdash; Oct 2023</span>
+										<span class="pill js-duration">1 yr 5 mo</span>
+									</div>
+									<div class="tl-bar" aria-hidden="true"><span style="--w: 81.0%"></span></div>
+								</li>
+							</ol>
+						</div>
+					</li>
+				</ol>
 			</div>
 		</div>
 	</section>
 
 	<!-- Projects -->
-	<section class="section alt" id="projects">
-		<div class="container">
-			<div class="section-head">
-				<h2>Cloud Projects</h2>
-				<p>Hands-on AWS infrastructure work, built with Terraform, CloudFormation, and Python.</p>
-			</div>
-			<div class="card-grid">
+	<section class="section" id="projects">
+		<div class="container split">
+			<h2 class="split-label"><span class="sec-num">03</span>Projects</h2>
+			<div>
+				<p class="sec-lead">AWS infrastructure built with Terraform, CloudFormation, and Python. <a class="more"
+						href="https://github.com/kushptl1" target="_blank" rel="noreferrer noopener">all repos on
+						GitHub &rarr;</a></p>
+				<div class="card-grid">
 				<a class="card project-card" href="https://github.com/kushptl1/Web-Server-Deployment-and-Automation"
 					target="_blank" rel="noreferrer noopener">
 					<h3>AWS Web Server Deployment</h3>
@@ -132,8 +277,8 @@
 				<a class="card project-card" href="https://github.com/kushptl1/terraform-state-lab" target="_blank"
 					rel="noreferrer noopener">
 					<h3>Terraform Remote State</h3>
-					<p>Configured a remote Terraform backend using S3 for state storage and DynamoDB for state
-						locking, enabling safe, team-friendly infrastructure changes.</p>
+					<p>Remote Terraform backend with S3 holding state and DynamoDB handling locks, so infrastructure
+						changes stay safe to run as a team.</p>
 					<div class="tags">
 						<span class="tag">Terraform</span>
 						<span class="tag">S3</span>
@@ -144,8 +289,8 @@
 				<a class="card project-card" href="https://github.com/kushptl1/terraform-multiple-instances"
 					target="_blank" rel="noreferrer noopener">
 					<h3>Terraform Loops for EC2</h3>
-					<p>Used <code>count</code> and <code>for_each</code> to provision multiple EC2 instances
-						dynamically from a single configuration, verified with the AWS CLI.</p>
+					<p>Fleets of EC2 instances provisioned from a single configuration with <code>count</code> and
+						<code>for_each</code>, verified through the AWS CLI.</p>
 					<div class="tags">
 						<span class="tag">Terraform</span>
 						<span class="tag">EC2</span>
@@ -157,8 +302,8 @@
 					href="https://github.com/kushptl1/Amazon-S3-activities-using-Python-Boto3" target="_blank"
 					rel="noreferrer noopener">
 					<h3>S3 Automation with Boto3</h3>
-					<p>Python scripts covering the S3 lifecycle: creating buckets, uploading and downloading objects,
-						listing contents, enabling versioning, and cleaning up.</p>
+					<p>Python scripts driving the full S3 lifecycle: creating buckets, uploading and downloading
+						objects, listing contents, enabling versioning, and cleaning up after itself.</p>
 					<div class="tags">
 						<span class="tag">Python</span>
 						<span class="tag">Boto3</span>
@@ -168,9 +313,9 @@
 				</a>
 				<a class="card project-card" href="https://github.com/kushptl1/terraform-lab" target="_blank"
 					rel="noreferrer noopener">
-					<h3>Terraform Fundamentals Lab</h3>
-					<p>Introductory Terraform work provisioning EC2, VPC, and S3 resources on AWS as a foundation for
-						the modular projects above.</p>
+					<h3>Terraform Foundations</h3>
+					<p>First pass at provisioning EC2, VPC, and S3 on AWS with Terraform, and the groundwork the
+						modular projects here build on.</p>
 					<div class="tags">
 						<span class="tag">Terraform</span>
 						<span class="tag">EC2</span>
@@ -179,55 +324,65 @@
 					</div>
 					<span class="card-link">View on GitHub →</span>
 				</a>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Latest from Medium -->
 	<section class="section" id="blog">
-		<div class="container">
-			<div class="section-head">
-				<h2>Latest from Medium</h2>
-				<p>My most recent write-ups, pulled live from Medium.</p>
-			</div>
-			<div class="card-grid" id="medium-posts">
-				<p class="posts-status">Loading posts…</p>
+		<div class="container split">
+			<h2 class="split-label"><span class="sec-num">04</span>Writing</h2>
+			<div>
+				<p class="sec-lead">Write-ups from things I've broken, built, or had to look up twice. <a class="more"
+						href="https://medium.com/@krp20502050" target="_blank" rel="noreferrer noopener">all posts
+						&rarr;</a></p>
+				<div class="card-grid" id="medium-posts">
+					<p class="posts-status">Loading posts…</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Footer -->
+	</main>
+
+	<!-- Contact -->
 	<footer class="site-footer" id="connect">
-		<div class="container footer-inner">
-			<h2>Connect With Me</h2>
-			<div class="social-links">
-				<a href="https://www.linkedin.com/in/Kusptl" target="_blank" rel="noreferrer noopener"
-					aria-label="LinkedIn">
-					<svg viewBox="0 0 24 24">
-						<path
-							d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
-					</svg>
-					<span>LinkedIn</span>
-				</a>
-				<a href="https://github.com/Kushptl1" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
-					<svg viewBox="0 0 24 24">
-						<path
-							d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2z" />
-					</svg>
-					<span>GitHub</span>
-				</a>
-				<a href="mailto:kushp1@umbc.edu" aria-label="Email">
-					<svg viewBox="0 0 24 24">
-						<path
-							d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6.5l8 5 8-5v1.74z" />
-					</svg>
-					<span>Email</span>
-				</a>
+		<div class="container split">
+			<h2 class="split-label">Contact</h2>
+			<div>
+				<p class="footer-lead">Open to cloud security and IAM engineering roles. Email is the quickest way
+					to reach me, and I read everything that lands there.</p>
+				<ul class="footer-links">
+						<li>
+							<a href="mailto:kushp1@umbc.edu">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6.5l8 5 8-5v1.74z" /></svg>
+								<span>Email</span>
+								
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/Kusptl" target="_blank" rel="noreferrer noopener">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" /></svg>
+								<span>LinkedIn</span>
+								<span class="link-arrow" aria-hidden="true">&#8599;</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/Kushptl1" target="_blank" rel="noreferrer noopener">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2z" /></svg>
+								<span>GitHub</span>
+								<span class="link-arrow" aria-hidden="true">&#8599;</span>
+							</a>
+						</li>
+				</ul>
+				<p class="copyright">&copy; <span id="year">2026</span> Kush Patel. Built and hosted on GitHub
+					Pages.</p>
 			</div>
-			<p class="copyright">© 2026 Kush Patel</p>
 		</div>
 	</footer>
 
+	<script src="assets/js/site.js"></script>
 	<script src="assets/js/medium-feed.js"></script>
 
 	<!-- Cloudflare Web Analytics -->

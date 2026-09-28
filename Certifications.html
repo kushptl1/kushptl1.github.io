@@ -2,115 +2,238 @@
 <html lang="en">
 
 <head>
+	<script>
+		// Applies the saved theme before first paint so the page never flashes.
+		document.documentElement.classList.add("js");
+		try {
+			var t = localStorage.getItem("theme");
+			if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+		} catch (e) {}
+	</script>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Certifications | Kush Patel</title>
-	<meta name="description" content="Certifications earned by Kush Patel, including CompTIA Security+, Microsoft Azure Fundamentals (AZ-900), Splunk, and more." />
+	<meta name="description" content="Kush Patel's certifications across security operations, cloud, and vulnerability management: CompTIA Security+, Microsoft Azure Fundamentals (AZ-900), Qualys VMDR, and Splunk." />
+	<link rel="canonical" href="https://kushptl1.github.io/Certifications.html" />
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+	<!-- Social preview -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Kush Patel" />
+	<meta property="og:url" content="https://kushptl1.github.io/Certifications.html" />
+	<meta property="og:title" content="Certifications | Kush Patel" />
+	<meta name="twitter:title" content="Certifications | Kush Patel" />
+	<meta property="og:description"
+		content="Four certifications and two programs across security operations, cloud, and vulnerability management." />
+	<meta property="og:image" content="https://kushptl1.github.io/images/og-card.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:description"
+		content="Four certifications and two programs across security operations, cloud, and vulnerability management." />
+	<meta name="twitter:image" content="https://kushptl1.github.io/images/og-card.jpg" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="assets/css/style.css" />
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Kush Patel",
+		"url": "https://kushptl1.github.io/",
+		"hasCredential": [
+			{
+				"@type": "EducationalOccupationalCredential",
+				"name": "CompTIA Security+",
+				"credentialCategory": "certificate",
+				"recognizedBy": { "@type": "Organization", "name": "CompTIA" }
+			},
+			{
+				"@type": "EducationalOccupationalCredential",
+				"name": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+				"credentialCategory": "certificate",
+				"recognizedBy": { "@type": "Organization", "name": "Microsoft" }
+			},
+			{
+				"@type": "EducationalOccupationalCredential",
+				"name": "Qualys VMDR",
+				"credentialCategory": "certificate",
+				"recognizedBy": { "@type": "Organization", "name": "Qualys" }
+			},
+			{
+				"@type": "EducationalOccupationalCredential",
+				"name": "Intro to Splunk",
+				"credentialCategory": "certificate",
+				"recognizedBy": { "@type": "Organization", "name": "Splunk" }
+			}
+		]
+	}
+	</script>
 </head>
 
 <body>
+
+	<a class="skip-link" href="#main">Skip to content</a>
 
 	<!-- Header -->
 	<header class="site-header">
 		<div class="container">
 			<a class="brand" href="index.html">Kush<span>Patel</span></a>
-			<nav class="site-nav">
+			<nav class="site-nav" id="site-nav">
 				<a href="index.html#about">About</a>
+				<a href="index.html#experience">Experience</a>
 				<a href="index.html#projects">Projects</a>
-				<a href="Certifications.html">Certifications</a>
+				<a href="index.html#blog">Writing</a>
+				<a href="Certifications.html" aria-current="page">Certifications</a>
 				<a href="#connect">Contact</a>
 			</nav>
+				<div class="nav-actions">
+					<button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">
+						<svg class="icon-light" viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-13.5a1 1 0 0 1 1 1V6a1 1 0 0 1-2 0V4.5a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1V21a1 1 0 0 1-2 0v-1.5a1 1 0 0 1 1-1zM4.5 11a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2h1.5zm16.5 0a1 1 0 0 1 0 2h-1.5a1 1 0 0 1 0-2H21zM5.99 4.58l1.06 1.06a1 1 0 0 1-1.41 1.41L4.58 5.99A1 1 0 0 1 5.99 4.58zm12.02 12.02 1.06 1.06a1 1 0 0 1-1.41 1.41l-1.06-1.06a1 1 0 0 1 1.41-1.41zM18.01 4.58a1 1 0 0 1 1.41 1.41l-1.06 1.06a1 1 0 1 1-1.41-1.41l1.06-1.06zM5.99 16.6a1 1 0 0 1 1.41 1.41l-1.06 1.06a1 1 0 0 1-1.41-1.41l1.06-1.06z" />
+						</svg>
+						<svg class="icon-dark" viewBox="0 0 24 24" aria-hidden="true">
+							<path d="M21.3 13.2a9 9 0 1 1-10.5-10.5 1 1 0 0 1 1.2 1.3 7 7 0 0 0 8 8 1 1 0 0 1 1.3 1.2z" />
+						</svg>
+					</button>
+					<button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-expanded="false"
+						aria-controls="site-nav">
+						<span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+					</button>
+				</div>
 		</div>
 	</header>
 
-	<!-- Page hero -->
+	<main id="main">
+
+	<!-- Page head -->
 	<section class="page-hero">
 		<div class="container">
-			<h1>Certifications</h1>
-			<p>Credentials and training I've earned across security, cloud, and data analysis.</p>
+			<p class="kicker kicker-plain">Credentials</p>
+			<h1 class="page-title">What I've certified in,<br />and what it actually covers.</h1>
+			<p class="page-sub">Four certifications and two programs across security operations, cloud, and
+				vulnerability management.</p>
 		</div>
 	</section>
 
-	<!-- Featured certs -->
+	<!-- Certifications -->
 	<section class="section" id="certs">
-		<div class="container">
-			<div class="cert-grid">
-				<div class="cert-card">
-					<img src="images/sec+.png" alt="CompTIA Security+ logo" />
-					<div>
-						<h3>CompTIA Security+</h3>
-						<p class="cert-date">Issued Sep 2024</p>
-						<p>Able to assess the security posture of an enterprise environment and recommend and
-							implement appropriate security solutions.</p>
-					</div>
-				</div>
-				<div class="cert-card">
-					<img src="images/AZ900-logo.png" alt="Microsoft Azure Fundamentals AZ-900 badge" />
-					<div>
-						<h3>Microsoft Azure Fundamentals (AZ-900)</h3>
-						<p class="cert-date">Issued June 2024</p>
-						<p>Foundational understanding of cloud concepts, Azure services, workloads, security, and
-							privacy in Microsoft Azure.</p>
-					</div>
-				</div>
-				<div class="cert-card">
-					<img src="images/splunk.png" alt="Splunk logo" />
-					<div>
-						<h3>Intro to Splunk</h3>
-						<p class="cert-date">Issued 2024</p>
-						<p>Essential skills in navigating and utilizing Splunk for data analysis, visualization, and
-							operational intelligence.</p>
-					</div>
-				</div>
-				<div class="cert-card">
-					<img src="images/qualys.jpg" alt="Qualys logo" />
-					<div>
-						<h3>Vulnerability Management Detection and Response</h3>
-						<p class="cert-date">Qualys · Issued May 2024</p>
-						<p>Certified in identifying, prioritizing, and remediating vulnerabilities using the Qualys
-							VMDR platform.</p>
-					</div>
+		<div class="container split">
+			<h2 class="split-label"><span class="sec-num">01</span>Certifications</h2>
+			<div>
+				<div class="cert-grid">
+					<article class="cert-card">
+						<img src="images/sec+.png" width="600" height="600" loading="lazy" decoding="async"
+							alt="CompTIA Security+ logo" />
+						<div class="cert-body">
+							<h3>CompTIA Security+</h3>
+							<p class="cert-meta"><span>CompTIA</span><span class="pill">Sep 2024</span></p>
+							<p>The baseline credential for security work: assessing the posture of an enterprise environment and putting the right controls in place. It maps closely to the work I do daily.</p>
+						</div>
+					</article>
+					<article class="cert-card">
+						<img src="images/AZ900-logo.png" width="600" height="600" loading="lazy" decoding="async"
+							alt="Microsoft Azure Fundamentals AZ-900 badge" />
+						<div class="cert-body">
+							<h3>Azure Fundamentals</h3>
+							<p class="cert-meta"><span>Microsoft &middot; AZ-900</span><span class="pill">Jun 2024</span></p>
+							<p>Cloud fundamentals on Azure: core services, workloads, and the shared-responsibility model that decides which half of cloud security is mine.</p>
+						</div>
+					</article>
+					<article class="cert-card">
+						<img src="images/splunk.png" width="638" height="193" loading="lazy" decoding="async"
+							alt="Splunk logo" />
+						<div class="cert-body">
+							<h3>Intro to Splunk</h3>
+							<p class="cert-meta"><span>Splunk</span><span class="pill">2024</span></p>
+							<p>Searching, dashboards, and investigation in Splunk, which is the basis for the log analysis I do when triaging an alert.</p>
+						</div>
+					</article>
+					<article class="cert-card">
+						<img src="images/qualys.jpg" width="800" height="872" loading="lazy" decoding="async"
+							alt="Qualys logo" />
+						<div class="cert-body">
+							<h3>Qualys VMDR</h3>
+							<p class="cert-meta"><span>Qualys</span><span class="pill">May 2024</span></p>
+							<p>Vulnerability Management, Detection and Response. Finding, prioritizing, and remediating vulnerabilities, from configuring the scan through verifying the fix held.</p>
+						</div>
+					</article>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Footer -->
-	<footer class="site-footer" id="connect">
-		<div class="container footer-inner">
-			<h2>Connect With Me</h2>
-			<div class="social-links">
-				<a href="https://www.linkedin.com/in/Kusptl" target="_blank" rel="noreferrer noopener"
-					aria-label="LinkedIn">
-					<svg viewBox="0 0 24 24">
-						<path
-							d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
-					</svg>
-					<span>LinkedIn</span>
-				</a>
-				<a href="https://github.com/Kushptl1" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
-					<svg viewBox="0 0 24 24">
-						<path
-							d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2z" />
-					</svg>
-					<span>GitHub</span>
-				</a>
-				<a href="mailto:kushp1@umbc.edu" aria-label="Email">
-					<svg viewBox="0 0 24 24">
-						<path
-							d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6.5l8 5 8-5v1.74z" />
-					</svg>
-					<span>Email</span>
-				</a>
+	<!-- Training -->
+	<section class="section" id="training">
+		<div class="container split">
+			<h2 class="split-label"><span class="sec-num">02</span>Training</h2>
+			<div>
+				<p class="sec-lead">Longer programs rather than single exams.</p>
+				<div class="cert-grid">
+					<article class="cert-card">
+						<img class="logo-bleed" src="images/codepath.png" width="240" height="240" loading="lazy"
+							decoding="async" alt="CodePath logo" />
+						<div class="cert-body">
+							<h3>Intermediate Cybersecurity</h3>
+							<p class="cert-meta"><span>CodePath</span></p>
+							<p>A course-length program in applied security, taken alongside my degree at UMBC.</p>
+						</div>
+					</article>
+					<article class="cert-card">
+						<img class="logo-bleed" src="images/codepath.png" width="240" height="240" loading="lazy"
+							decoding="async" alt="CodePath logo" />
+						<div class="cert-body">
+							<h3>Foundations of AI Engineering</h3>
+							<p class="cert-meta"><span>CodePath</span></p>
+							<p>An introduction to building with modern AI models and the tooling around them.</p>
+						</div>
+					</article>
+				</div>
 			</div>
-			<p class="copyright">© 2026 Kush Patel</p>
+		</div>
+	</section>
+
+	</main>
+
+	<!-- Contact -->
+	<footer class="site-footer" id="connect">
+		<div class="container split">
+			<h2 class="split-label">Contact</h2>
+			<div>
+				<p class="footer-lead">Open to cloud security and IAM engineering roles. Email is the quickest way
+					to reach me, and I read everything that lands there.</p>
+				<ul class="footer-links">
+						<li>
+							<a href="mailto:kushp1@umbc.edu">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6.5l8 5 8-5v1.74z" /></svg>
+								<span>Email</span>
+								
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/Kusptl" target="_blank" rel="noreferrer noopener">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" /></svg>
+								<span>LinkedIn</span>
+								<span class="link-arrow" aria-hidden="true">&#8599;</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/Kushptl1" target="_blank" rel="noreferrer noopener">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2z" /></svg>
+								<span>GitHub</span>
+								<span class="link-arrow" aria-hidden="true">&#8599;</span>
+							</a>
+						</li>
+				</ul>
+				<p class="copyright">&copy; <span id="year">2026</span> Kush Patel. Built and hosted on GitHub
+					Pages.</p>
+			</div>
 		</div>
 	</footer>
+
+	<script src="assets/js/site.js"></script>
 
 	<!-- Cloudflare Web Analytics -->
 	<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js'
