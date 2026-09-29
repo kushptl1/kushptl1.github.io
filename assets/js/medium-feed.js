@@ -10,6 +10,7 @@ const MAX_POSTS = 3;
 const FALLBACK_TIMEOUT = 6000;
 
 const container = document.getElementById("medium-posts");
+const freshness = document.getElementById("posts-freshness");
 
 function stripHtml(html, maxLen = 140) {
 	const doc = new DOMParser().parseFromString(html, "text/html");
@@ -31,6 +32,13 @@ function formatDate(value) {
 
 function renderPosts(posts) {
 	container.innerHTML = "";
+	const latest = posts
+		.map((post) => new Date(post.pubDate))
+		.filter((date) => !Number.isNaN(date.getTime()))
+		.sort((a, b) => b - a)[0];
+	if (freshness && latest) {
+		freshness.textContent = `Latest post: ${formatDate(latest.toISOString())}`;
+	}
 	posts.slice(0, MAX_POSTS).forEach((post) => {
 		const card = document.createElement("a");
 		card.className = "card post-card";

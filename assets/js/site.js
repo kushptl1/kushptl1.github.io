@@ -115,16 +115,27 @@
 	}
 
 	const themeToggle = document.querySelector(".theme-toggle");
+
+	function updateThemeControl() {
+		if (!themeToggle) return;
+		const dark = activeTheme() === "dark";
+		themeToggle.setAttribute("aria-pressed", String(dark));
+		themeToggle.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+	}
+
 	if (themeToggle) {
 		themeToggle.addEventListener("click", function () {
 			applyTheme(activeTheme() === "dark" ? "light" : "dark");
+			updateThemeControl();
 		});
+		updateThemeControl();
 	}
 
 	// Follow the OS while the visitor hasn't picked a theme themselves.
 	systemDark.addEventListener("change", function () {
 		if (!stored()) {
 			root.removeAttribute("data-theme");
+			updateThemeControl();
 		}
 	});
 
