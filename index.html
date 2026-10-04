@@ -100,12 +100,12 @@
 			<div class="hero-text">
 				<p class="kicker"><span class="dot" aria-hidden="true"></span>Open to cloud security &amp; IAM roles</p>
 				<h1 class="hero-title">Hi, I'm <em>Kush Patel</em>.<br />I secure identity<br />and access.</h1>
-				<p class="hero-sub">Keeping clinicians' access tight, audited, and fast. Building toward cloud security
-					with AWS, Terraform, and Python.</p>
+				<p class="hero-sub">I work on access control at the University of Maryland Medical System. Next I'm
+					moving into cloud security with AWS, Terraform, and Python.</p>
 					<div class="hero-cta">
-					<a class="btn btn-primary" href="#connect">Get in Touch <span aria-hidden="true">&rarr;</span></a>
-					<a class="btn btn-ghost" href="#projects">View Projects</a>
-					<a class="btn btn-ghost" href="Certifications.html">View Certifications</a>
+					<a class="btn btn-primary" href="#connect">Get in touch <span aria-hidden="true">&rarr;</span></a>
+					<a class="btn btn-ghost" href="#projects">View projects</a>
+					<a class="btn btn-ghost" href="Certifications.html">View certifications</a>
 				</div>
 			</div>
 			<aside class="hero-focus" aria-label="Core focus areas">
@@ -117,7 +117,7 @@
 					</li>
 					<li>
 						<span class="focus-index">02</span>
-						<div><h2>Healthcare IT</h2><p>Secure access that keeps clinical work moving</p></div>
+						<div><h2>Healthcare IT</h2><p>Access for clinicians who can't wait on IT</p></div>
 					</li>
 					<li>
 						<span class="focus-index">03</span>
@@ -263,22 +263,22 @@
 						GitHub &rarr;</a></p>
 				<article class="case-study">
 					<div class="case-study-heading">
-						<p class="case-study-kicker">Featured practice</p>
-						<h3>Identity controls that hold up under pressure</h3>
+						<p class="case-study-kicker">Day job</p>
+						<h3>Hospital access I can defend in a review</h3>
 					</div>
-					<p>My day-to-day IAM work centers on keeping access useful for clinicians and defensible during review: validating entitlements, remediating compromised credentials, and supporting joiner-mover-leaver workflows.</p>
+					<p>Most of my IAM work comes down to two questions. Can clinicians reach what they need, and can I prove they can't reach anything else? In practice that means validating entitlements, remediating compromised credentials, and handling access when people join, change roles, or leave.</p>
 					<div class="case-study-grid">
 						<div>
 							<h4>Controls</h4>
-							<p>Least privilege, access reviews, lifecycle checkpoints, and auditable remediation.</p>
+							<p>Least privilege, access reviews, lifecycle checkpoints, and remediation that leaves an audit trail.</p>
 						</div>
 						<div>
 							<h4>Tooling</h4>
 							<p>Active Directory, Azure AD, BeyondTrust, CrowdStrike Falcon Identity Protection, and ServiceNow.</p>
 						</div>
 						<div>
-							<h4>Cloud extension</h4>
-							<p>AWS IAM roles and scoped infrastructure patterns carry the same access discipline into Terraform and Python projects.</p>
+							<h4>In the cloud</h4>
+							<p>The CloudFormation stack below gives its Lambda a scoped IAM execution role. It's the same least-privilege rule, applied to AWS.</p>
 						</div>
 					</div>
 				</article>
@@ -286,7 +286,7 @@
 				<a class="card project-card" href="https://github.com/kushptl1/Web-Server-Deployment-and-Automation"
 					target="_blank" rel="noreferrer noopener">
 					<h3>AWS Web Server Deployment</h3>
-					<p>Modular Terraform deployment of a secure web tier: custom VPC with public and private subnets,
+					<p>Modular Terraform deployment of a web tier: custom VPC with public and private subnets,
 						Apache on EC2 behind an Application Load Balancer, S3 for static assets, and DynamoDB for
 						user data.</p>
 					<div class="tags">
@@ -316,8 +316,8 @@
 				<a class="card project-card" href="https://github.com/kushptl1/terraform-state-lab" target="_blank"
 					rel="noreferrer noopener">
 					<h3>Terraform Remote State</h3>
-					<p>Remote Terraform backend with S3 holding state and DynamoDB handling locks, so infrastructure
-						changes stay safe to run as a team.</p>
+					<p>Remote Terraform backend with S3 holding state and DynamoDB handling locks, so two people can't
+						apply changes at the same time.</p>
 					<div class="tags">
 						<span class="tag">Terraform</span>
 						<span class="tag">S3</span>
@@ -328,8 +328,8 @@
 				<a class="card project-card" href="https://github.com/kushptl1/terraform-multiple-instances"
 					target="_blank" rel="noreferrer noopener">
 					<h3>Terraform Loops for EC2</h3>
-					<p>Fleets of EC2 instances provisioned from a single configuration with <code>count</code> and
-						<code>for_each</code>, verified through the AWS CLI.</p>
+					<p>Provisions multiple EC2 instances from one configuration using <code>count</code> and
+						<code>for_each</code>, then checks them with the AWS CLI.</p>
 					<div class="tags">
 						<span class="tag">Terraform</span>
 						<span class="tag">EC2</span>
@@ -341,7 +341,7 @@
 					href="https://github.com/kushptl1/Amazon-S3-activities-using-Python-Boto3" target="_blank"
 					rel="noreferrer noopener">
 					<h3>S3 Automation with Boto3</h3>
-					<p>Python scripts driving the full S3 lifecycle: creating buckets, uploading and downloading
+					<p>Python scripts that cover the full S3 lifecycle: creating buckets, uploading and downloading
 						objects, listing contents, enabling versioning, and cleaning up after itself.</p>
 					<div class="tags">
 						<span class="tag">Python</span>
@@ -353,8 +353,8 @@
 				<a class="card project-card" href="https://github.com/kushptl1/terraform-lab" target="_blank"
 					rel="noreferrer noopener">
 					<h3>Terraform Foundations</h3>
-					<p>First pass at provisioning EC2, VPC, and S3 on AWS with Terraform, and the groundwork the
-						modular projects here build on.</p>
+					<p>My first pass at Terraform, provisioning EC2, a VPC, and S3 on AWS. The modular projects above
+						started from it.</p>
 					<div class="tags">
 						<span class="tag">Terraform</span>
 						<span class="tag">EC2</span>

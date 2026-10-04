@@ -144,8 +144,8 @@
 	 */
 
 	(function () {
-		// A page that already marks its own nav link (Certifications) keeps that
-		// single highlight rather than gaining a second one at the footer.
+		// Certifications marks its own nav link as the current page. Skip the scroll
+		// highlight there so the footer doesn't box Contact as well.
 		if (document.querySelector('.site-nav a[aria-current="page"]')) return;
 
 		const links = [].slice.call(document.querySelectorAll('.site-nav a[href^="#"]'));

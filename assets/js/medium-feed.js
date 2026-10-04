@@ -14,7 +14,7 @@ const freshness = document.getElementById("posts-freshness");
 
 function stripHtml(html, maxLen = 140) {
 	const doc = new DOMParser().parseFromString(html, "text/html");
-	// Same rule as scripts/fetch_medium.py: captions, code, and headings aren't excerpt material.
+	// Drops captions, code, and headings, matching scripts/fetch_medium.py.
 	doc.querySelectorAll("figure, pre, h1, h2, h3, h4, h5, h6").forEach((el) => el.remove());
 	const text = (doc.body.textContent || "")
 		.replace(/https?:\/\/\S+/g, " ")
@@ -86,7 +86,7 @@ function renderPosts(posts) {
 
 function showFallbackMessage() {
 	container.innerHTML =
-		'<p class="posts-status">Couldn’t load posts right now. ' +
+		"<p class='posts-status'>Couldn't load posts right now. " +
 		`<a href="https://medium.com/${MEDIUM_USER}" target="_blank" rel="noreferrer noopener">Read them on Medium</a>.</p>`;
 }
 
