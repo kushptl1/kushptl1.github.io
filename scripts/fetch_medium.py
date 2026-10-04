@@ -18,7 +18,11 @@ NS = {"content": "http://purl.org/rss/1.0/modules/content/"}
 
 
 def text_of(html, max_len=140):
-	text = re.sub(r"<[^>]+>", " ", html or "")
+	# Image captions, code blocks, and headings make poor excerpts, so drop them
+	# before flattening to text.
+	text = re.sub(r"<(figure|pre|h[1-6])\b.*?</\1>", " ", html or "", flags=re.S | re.I)
+	text = re.sub(r"<[^>]+>", " ", text)
+	text = re.sub(r"https?://\S+", " ", text)
 	text = re.sub(r"&[a-zA-Z#0-9]+;", " ", text)
 	text = re.sub(r"\s+", " ", text).strip()
 	return text[:max_len].rstrip() + "…" if len(text) > max_len else text

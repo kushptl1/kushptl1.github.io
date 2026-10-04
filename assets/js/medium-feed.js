@@ -6,7 +6,7 @@
  */
 
 const MEDIUM_USER = "@krp20502050";
-const MAX_POSTS = 3;
+const MAX_POSTS = 4;
 const FALLBACK_TIMEOUT = 6000;
 
 const container = document.getElementById("medium-posts");
@@ -14,7 +14,12 @@ const freshness = document.getElementById("posts-freshness");
 
 function stripHtml(html, maxLen = 140) {
 	const doc = new DOMParser().parseFromString(html, "text/html");
-	const text = (doc.body.textContent || "").trim().replace(/\s+/g, " ");
+	// Same rule as scripts/fetch_medium.py: captions, code, and headings aren't excerpt material.
+	doc.querySelectorAll("figure, pre, h1, h2, h3, h4, h5, h6").forEach((el) => el.remove());
+	const text = (doc.body.textContent || "")
+		.replace(/https?:\/\/\S+/g, " ")
+		.replace(/\s+/g, " ")
+		.trim();
 	return text.length > maxLen ? text.slice(0, maxLen).trimEnd() + "…" : text;
 }
 
